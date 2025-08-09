@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luke Nuculaj</title>
+  <meta name="description" content="Electrical & Computer Engineering graduate student focused on control, estimation, and AI." />
+  <meta property="og:title" content="Luke Nuculaj" />
+  <meta property="og:description" content="Electrical & Computer Engineering graduate student focused on control, estimation, and AI." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #555555;
+      --link: #111111;
+      --border: #e5e5e5;
+      --accent: #111111;
+    }
+    html, body { background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    body { margin: 0; line-height: 1.6; }
+    .container { max-width: 880px; margin: 0 auto; padding: 32px 20px 80px; }
+    header { display: grid; grid-template-columns: 120px 1fr; gap: 24px; align-items: center; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+    header img { width: 120px; height: 120px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); }
+    h1 { font-size: 32px; line-height: 1.2; margin: 0; }
+    .subtitle { color: var(--muted); margin-top: 6px; }
+    nav { margin-top: 10px; }
+    nav a { color: var(--link); text-decoration: none; margin-right: 16px; border-bottom: 1px solid transparent; }
+    nav a:hover { border-color: var(--accent); }
+    section { padding: 28px 0; border-bottom: 1px solid var(--border); }
+    section:last-of-type { border-bottom: none; }
+    h2 { font-size: 20px; margin: 0 0 8px; }
+    .pill { display: inline-block; border: 1px solid var(--border); padding: 2px 8px; border-radius: 999px; margin: 4px 6px 0 0; font-size: 14px; }
+    ul { margin: 8px 0 0 20px; }
+    .meta { color: var(--muted); font-size: 14px; }
+    .row { display: grid; grid-template-columns: 1fr; gap: 8px; }
+    .item { margin-bottom: 12px; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 740px) {
+      header { grid-template-columns: 80px 1fr; }
+      header img { width: 80px; height: 80px; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+    footer { margin-top: 40px; color: var(--muted); font-size: 14px; }
+    .muted { color: var(--muted); }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <!-- Replace headshot.jpg with your uploaded file name or rename your photo to headshot.jpg -->
+      <img src="headshot.jpg" alt="Portrait of Luke Nuculaj" />
+      <div>
+        <h1>Luke Nuculaj</h1>
+        <div class="subtitle">Electrical & Computer Engineering — Ph.D. student, Oakland University</div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#publications">Publications</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        Graduate researcher focused on control, estimation, and embedded AI with a strong math background.
+        I work in the High-Performance Embedded Systems Lab at Oakland University. Interests include Kalman filtering,
+        model predictive control, and low-compute online learning for embedded systems.
+      </p>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul>
+        <li>
+          L. Nuculaj & J. Chen, “Simultaneous Cell State Estimation via Dense Adaptive Extended Kalman Filter,”
+          <em>IEEE Transactions on Control Systems Technology</em>, under revision (Nov. 2024).
+        </li>
+        <li>
+          L. Nuculaj, J. Volcic & S. Alawneh, “GPU-Accelerated Dual Gradient-Projection Algorithm for Embedded Linear MPC,”
+          <em>IEEE ICMI</em>, under review (Dec. 2024).
+        </li>
+        <li>
+          L. Nuculaj, A. Kidwell, C. Homayouni, A. Fillmore, D. Hanna & J. Chen, “Optimal FPGA Implementation of Dense Extended Kalman Filter for Simultaneous Cell State Estimation,”
+          <em>IEEE MWSCAS</em>, Springfield, MA, Aug. 11–14, 2024.
+        </li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="item">
+        <strong>Graduate Assistant</strong> · Oakland University — Auburn Hills, MI
+        <div class="meta">Sep 2022 – Present</div>
+        <ul>
+          <li>Research in estimation for lithium battery systems; current focus on low-compute online learning for embedded systems.</li>
+          <li>Master’s thesis: simultaneous cell state-of-charge estimation using dense adaptive EKF.</li>
+          <li>Teaching assistant for Computer Hardware Design (special/general-purpose FPGA hardware).</li>
+        </ul>
+      </div>
+      <div class="item">
+        <strong>FPGA Intern</strong> · Excelsior Engineering LLC — Auburn Hills, MI
+        <div class="meta">May 2022 – Aug 2022</div>
+        <ul>
+          <li>Built high-speed VHDL controller interfacing a Xilinx Spartan‑7 FPGA with a PIC32 via EBI.</li>
+          <li>Ported logic to Xilinx CPLD; wrote testbenches, ran timing sims, and verified on hardware.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <strong>Embedded Software Intern</strong> · Alps Alpine — Auburn Hills, MI
+        <div class="meta">Apr 2021 – Apr 2022</div>
+        <ul>
+          <li>Worked on embedded automotive systems (Gateways, TCUs) and UWB-capable devices in C.</li>
+          <li>Used Python for large‑scale data extraction, processing, and visualization to analyze experiments.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="item">
+        <strong>Reference Tracking MPC with Custom Interior‑Point Solver</strong>
+        <div class="meta">In progress</div>
+        <ul>
+          <li>MATLAB solver from scratch for simplified vehicle dynamics; target real‑time embedded demo on RC car.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <strong>Hardware Implementation of Dense Kalman Filter</strong>
+        <ul>
+          <li>Design‑space exploration on SoC; multi‑objective optimization for resource binding/allocation.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <strong>Battery Balancing with Parallelized Deep Neural Networks</strong>
+        <ul>
+          <li>Trained DNNs on MPC‑generated datasets; deployed to dual‑core Intel Atom (TBB‑accelerated).</li>
+        </ul>
+      </div>
+      <p class="muted">Placeholder: <span class="mono">/projects</span> page coming soon. Add GitHub links below.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="two-col">
+        <div>
+          <strong>Ph.D., Electrical & Computer Engineering</strong>, Oakland University
+          <div class="meta">2024 – present · GPA 4.0</div>
+          <div class="muted">Applied Numerical Matrix Methods; Math Analysis for Engineers II</div>
+        </div>
+        <div>
+          <strong>M.S., Electrical & Computer Engineering</strong>, Oakland University
+          <div class="meta">2022 – 2024 · GPA 4.0</div>
+          <div class="muted">Embedded AI; Model Predictive Control; High‑Performance Embedded Systems</div>
+        </div>
+        <div>
+          <strong>B.S., Electrical & Computer Engineering</strong>, Oakland University
+          <div class="meta">2018 – 2022 · GPA 3.9</div>
+          <div class="muted">Computer Hardware Design; Automatic Control Systems; Microprocessors</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div>
+        <span class="pill">MATLAB</span>
+        <span class="pill">C/C++</span>
+        <span class="pill">VHDL</span>
+        <span class="pill">Python</span>
+        <span class="pill">LaTeX</span>
+      </div>
+      <div class="muted" style="margin-top:8px">Soft skills: Well‑spoken · Punctual · Diligent · Self‑motivated · Honest</div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:lukenuculaj@oakland.edu">lukenuculaj@oakland.edu</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/luke-nuculaj" target="_blank" rel="noopener">linkedin.com/in/luke-nuculaj</a></p>
+      <p>GitHub (placeholder): <a href="#" aria-disabled="true" class="muted">add link</a></p>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Luke Nuculaj</div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
