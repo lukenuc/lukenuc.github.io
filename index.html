@@ -4,6 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Luke Nuculaj</title>
+  <meta name="description" content="Electrical & Computer Engineering graduate student focused on control, estimation, and AI." />
+  <meta property="og:title" content="Luke Nuculaj" />
+  <meta property="og:description" content="Electrical & Computer Engineering graduate student focused on control, estimation, and AI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="headshot.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23111'/><text x='16' y='22' font-size='16' font-family='system-ui,sans-serif' font-weight='bold' fill='white' text-anchor='middle'>LN</text></svg>" />
   <style>
     :root {
       --bg: #ffffff;
@@ -13,29 +19,58 @@
       --border: #e5e5e5;
       --accent: #111111;
     }
-    html, body { background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1a1a1a;
+        --text: #e0e0e0;
+        --muted: #999999;
+        --link: #e0e0e0;
+        --border: #333333;
+        --accent: #e0e0e0;
+      }
+    }
+    html { scroll-behavior: smooth; }
+    html, body { background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
     body { margin: 0; line-height: 1.6; }
     .container { max-width: 880px; margin: 0 auto; padding: 32px 20px 80px; }
-    header { display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: center; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
-    header img { width: 120px; height: auto; max-height: 160px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); }
+    header { display: grid; grid-template-columns: 120px 1fr; gap: 24px; align-items: center; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+    header img { width: 120px; height: 120px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); }
     h1 { font-size: 32px; line-height: 1.2; margin: 0; }
     .subtitle { color: var(--muted); margin-top: 6px; }
+    .cv-link { display: inline-block; margin-top: 8px; font-size: 14px; color: var(--link); text-decoration: none; border: 1px solid var(--border); padding: 2px 10px; border-radius: 999px; }
+    .cv-link:hover { border-color: var(--accent); }
     nav { margin-top: 10px; }
     nav a { color: var(--link); text-decoration: none; margin-right: 16px; border-bottom: 1px solid transparent; }
-    nav a:hover { border-color: var(--accent); }
+    nav a:hover, nav a.active { border-color: var(--accent); }
     section { padding: 28px 0; border-bottom: 1px solid var(--border); }
     section:last-of-type { border-bottom: none; }
     h2 { font-size: 20px; margin: 0 0 8px; }
     .pill { display: inline-block; border: 1px solid var(--border); padding: 2px 8px; border-radius: 999px; margin: 4px 6px 0 0; font-size: 14px; }
     ul { margin: 8px 0 0 20px; }
     .meta { color: var(--muted); font-size: 14px; }
+    .row { display: grid; grid-template-columns: 1fr; gap: 8px; }
+    .item { margin-bottom: 12px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     @media (max-width: 740px) {
-      header { grid-template-columns: auto 1fr; }
-      header img { width: 80px; max-height: 100px; }
+      header { grid-template-columns: 80px 1fr; }
+      header img { width: 80px; height: 80px; }
       .two-col { grid-template-columns: 1fr; }
     }
     footer { margin-top: 40px; color: var(--muted); font-size: 14px; }
+    .muted { color: var(--muted); }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    @media print {
+      nav, .cv-link { display: none; }
+      body { line-height: 1.4; }
+      .container { max-width: 100%; padding: 0; }
+      section { border-bottom: none; padding: 16px 0; }
+      header { border-bottom: none; }
+      footer { display: none; }
+      html, body { background: #fff; color: #000; }
+      .muted, .meta { color: #444; }
+      .pill { border-color: #ccc; }
+      a { color: #000; }
+    }
   </style>
 </head>
 <body>
@@ -45,6 +80,7 @@
       <div>
         <h1>Luke Nuculaj</h1>
         <div class="subtitle">Electrical & Computer Engineering — Ph.D. student, Oakland University</div>
+        <a class="cv-link" href="files/Luke_Nuculaj_Resume__Updated_Dec__2025_.pdf" target="_blank" rel="noopener">CV / Resume (PDF)</a>
         <nav>
           <a href="#about">About</a>
           <a href="#publications">Publications</a>
@@ -60,10 +96,9 @@
     <section id="about">
       <h2>About</h2>
       <p>
-        Graduate researcher focused on optimal control and state estimation as applied to automotive and battery systems.
-        I work in the Electrified and Intelligent Systems Automation (ELISA) Lab at Oakland University. Current research
-        interests include low-compute data-driven predictive control and dense extended Kalman filtering for state-of-charge
-        estimation. 
+        Graduate researcher focused on control, estimation, and embedded AI with a strong math background.
+        I work in the High-Performance Embedded Systems Lab at Oakland University. Interests include Kalman filtering,
+        model predictive control, and low-compute online learning for embedded systems.
       </p>
     </section>
 
@@ -71,21 +106,15 @@
       <h2>Publications</h2>
       <ul>
         <li>
-          <b>Luke Nuculaj</b> & Jun Chen, 
-          “<a class="highlight" href="https://ieeexplore.ieee.org/abstract/document/11024128?casa_token=emNxhw3NY7cAAAAA:VRT-WgaF91WwgXvrzRpvn3Q0ax06_8pkkLEgyN5KsV9-bL_n3sZF30xSz5oTa3-iwuxQAJDsyg" target="_blank" rel="noopener">
-          Simultaneous Cell State Estimation via Dense Adaptive Extended Kalman Filter
-          </a>,”
-          <em>IEEE Transactions on Control Systems Technology</em>, (Accepted for Publication in May 2025).
+          L. Nuculaj & J. Chen, "Simultaneous Cell State Estimation via Dense Adaptive Extended Kalman Filter,"
+          <em>IEEE Transactions on Control Systems Technology</em>, under revision (Nov. 2024).
         </li>
         <li>
-          <b>Luke Nuculaj</b>, Joseph Volcic & Shadi Alawneh, “GPU-Accelerated Dual Gradient-Projection Algorithm for Embedded Linear MPC,”
-          <em>IEEE ICMI</em>, to appear.
+          L. Nuculaj, J. Volcic & S. Alawneh, "GPU-Accelerated Dual Gradient-Projection Algorithm for Embedded Linear MPC,"
+          <em>IEEE ICMI</em>, under review (Dec. 2024).
         </li>
         <li>
-          <b>Luke Nuculaj</b>, Adam Kidwell, Connor Homayouni, Alex Fillmore, Darrin Hanna & Jun Chen, 
-          “<a class="highlight" href="https://ieeexplore.ieee.org/abstract/document/10658912?casa_token=eZmaDgMbQYsAAAAA:2ywQYnD2_9Gw2-buRWuLKIv_Sdwm7UyME2L0bAsrfvdnLGlxizxM2mJ8Tj5xnb4h0jnbXuyILQ" target="_blank" rel="noopener">
-          Optimal FPGA Implementation of Dense Extended Kalman Filter for Simultaneous Cell State Estimation
-          </a>,”
+          L. Nuculaj, A. Kidwell, C. Homayouni, A. Fillmore, D. Hanna & J. Chen, "Optimal FPGA Implementation of Dense Extended Kalman Filter for Simultaneous Cell State Estimation,"
           <em>IEEE MWSCAS</em>, Springfield, MA, Aug. 11–14, 2024.
         </li>
       </ul>
@@ -97,11 +126,9 @@
         <strong>Graduate Assistant</strong> · Oakland University — Auburn Hills, MI
         <div class="meta">Sep 2022 – Present</div>
         <ul>
-          <li>Work with a plethora of control-theory research topics ranging from Lyapunov stability analysis of 
-            reduced-order extended Kalman filtering to data-driven MPC.</li>
-          <li>Master’s thesis: simultaneous cell state-of-charge estimation using dense adaptive EKF.</li>
-          <li>Teaching assistant for OU's Computer Hardware Design, instructed 200+ students how to design
-            special and general-purpose hardware on FPGAs.</li>
+          <li>Research in estimation for lithium battery systems; current focus on low-compute online learning for embedded systems.</li>
+          <li>Master's thesis: simultaneous cell state-of-charge estimation using dense adaptive EKF.</li>
+          <li>Teaching assistant for Computer Hardware Design (special/general-purpose FPGA hardware).</li>
         </ul>
       </div>
       <div class="item">
@@ -125,13 +152,10 @@
     <section id="projects">
       <h2>Projects</h2>
       <div class="item">
-        <strong>Reference Tracking MPC with Custom Interior‑Point Solver</strong> [<a class="highlight" href="files/LukeNuculaj_APM5334_FinalProject.pdf" target="_blank" rel="noopener">PDF</a>]
+        <strong>Reference Tracking MPC with Custom Interior‑Point Solver</strong>
+        <div class="meta">In progress</div>
         <ul>
-          <li><b>Wrote an interior-point solver from scratch</b> in MATLAB to compute the optimal control sequence for
-            a reference-tracking double integrator.</li>
-          <li>Successfully implemented various sparse linear solvers from scratch (e.g., <b>successive over-relaxation, 
-            quasi-Newton methods, conjugate gradient</b>) to solve the SPD system at each iteration with a
-            full overhead comparison with the primal-dual system.</li>
+          <li>MATLAB solver from scratch for simplified vehicle dynamics; target real‑time embedded demo on RC car.</li>
         </ul>
       </div>
       <div class="item">
@@ -146,7 +170,6 @@
           <li>Trained DNNs on MPC‑generated datasets; deployed to dual‑core Intel Atom (TBB‑accelerated).</li>
         </ul>
       </div>
-      <p class="muted">Placeholder: <span class="mono">/projects</span> page coming soon. Add GitHub links below.</p>
     </section>
 
     <section id="education">
@@ -186,7 +209,7 @@
       <h2>Contact</h2>
       <p>Email: <a href="mailto:lukenuculaj@oakland.edu">lukenuculaj@oakland.edu</a></p>
       <p>LinkedIn: <a href="https://linkedin.com/in/luke-nuculaj" target="_blank" rel="noopener">linkedin.com/in/luke-nuculaj</a></p>
-      <p>GitHub (placeholder): <a href="#" aria-disabled="true" class="muted">add link</a></p>
+      <p>Google Scholar: <a href="https://scholar.google.com/citations?user=eeWu8DYAAAAJ&hl=en" target="_blank" rel="noopener">scholar.google.com</a></p>
     </section>
 
     <footer>
@@ -195,6 +218,19 @@
   </div>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          const active = document.querySelector('nav a[href="#' + entry.target.id + '"]');
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+    sections.forEach(section => observer.observe(section));
   </script>
 </body>
 </html>
