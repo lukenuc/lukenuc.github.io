@@ -59,8 +59,22 @@
     footer { margin-top: 40px; color: var(--muted); font-size: 14px; }
     .muted { color: var(--muted); }
     .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    .contact-form { margin-top: 20px; }
+    .contact-form input, .contact-form textarea {
+      display: block; width: 100%; max-width: 420px; padding: 8px 10px; margin-top: 6px; margin-bottom: 14px;
+      font-family: inherit; font-size: 14px; line-height: 1.5;
+      background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 6px;
+      box-sizing: border-box;
+    }
+    .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent); }
+    .contact-form label { font-size: 14px; color: var(--muted); }
+    .contact-form button {
+      padding: 6px 18px; font-size: 14px; font-family: inherit; cursor: pointer;
+      background: var(--text); color: var(--bg); border: none; border-radius: 999px;
+    }
+    .contact-form button:hover { opacity: 0.85; }
     @media print {
-      nav, .cv-link { display: none; }
+      nav, .cv-link, .contact-form { display: none; }
       body { line-height: 1.4; }
       .container { max-width: 100%; padding: 0; }
       section { border-bottom: none; padding: 16px 0; }
@@ -210,6 +224,16 @@
       <p>Email: <a href="mailto:lukenuculaj@oakland.edu">lukenuculaj@oakland.edu</a></p>
       <p>LinkedIn: <a href="https://linkedin.com/in/luke-nuculaj" target="_blank" rel="noopener">linkedin.com/in/luke-nuculaj</a></p>
       <p>Google Scholar: <a href="https://scholar.google.com/citations?user=eeWu8DYAAAAJ&hl=en" target="_blank" rel="noopener">scholar.google.com</a></p>
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <h2 style="margin-top:20px">Send a Message</h2>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button type="submit">Send</button>
+      </form>
     </section>
 
     <footer>
